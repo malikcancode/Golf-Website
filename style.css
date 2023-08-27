@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.main {
+  width: 100%;
+  height: 100%;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+.navbar h4 {
+  padding: 0 2vw;
+  margin-top: 1vw;
+  color: white;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+  filter: brightness(30%);
+}
+.page1 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  flex-direction: column;
+  z-index: 10;
+}
+.page1 h2 {
+  color: white;
+  font-size: 7vw;
+}
+.page1 h3 {
+  color: white;
+  font-size: 3vw;
+}
+.page1 p {
+  color: white;
+  font-size: 1vw;
+  width: 50%;
+}
+.scroller {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.scroller-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+}
+.scroller h4 {
+  display: inline-block;
+  font-size: 6vw;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #c1ff15;
+  margin-right: 10px;
+  color: transparent;
+  z-index: 10;
+}
+.scroller h4:hover {
+  color: #c1ff15;
+}
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.page3 {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 4vw;
+}
+.page3 img {
+  border-radius: 12px;
+}
+.about-us {
+  text-align: center;
+}
+.about-us h2 {
+  color: white;
+  font-size: 4vw;
+}
+.about-us p {
+  color: white;
+  font-size: 1vw;
+  padding: 1vw;
+}
+@media (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
+  video {
+    width: 100%;
+    height: 200vh;
+  }
+  .page3 {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .about-us {
+    padding: 2vw 0;
+  }
+  .about-us h2 {
+    font-size: 5vw;
+  }
+  .about-us p {
+    font-size: 3vw;
+  }
+  .page1 h2 {
+    font-size: 9vw;
+    color: yellow;
+  }
+  .page1 h3 {
+    font-size: 3.7vw;
+  }
+  .page1 p {
+    margin-top: 5px;
+    font-size: 2vw;
+    width: 80%;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+  }
+}
+.page4 {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+  z-index: 10;
+}
+.card {
+  height: 80%;
+  width: 24%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  transition: all ease 0.6s;
+}
+#card1 {
+  background-image: url("card1.avif");
+}
+#card2 {
+  background-image: url("card2.webp");
+}
+#card3 {
+  background-image: url("card3.avif");
+}
+#overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #c1ff15;
+  padding-top: 5vw;
+  padding: 5vh;
+  border-radius: 20px;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+#overlay h4 {
+  color: black;
+  font-size: 2vw;
+  font-weight: 800;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+#overlay p {
+  color: black;
+  font-size: 1vw;
+  overflow: hidden;
+}
+.card:hover #overlay {
+  opacity: 1;
+}
+.card:hover {
+  transform: rotate3d(-1, 1, 0, 20deg);
+}
+@media (max-width: 600px) {
+  .page4 {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5vw;
+    margin-top: 20px;
+  }
+  .card {
+    width: 100%;
+    height: 60vh;
+  }
+  #overlay {
+    height: 100%;
+    width: 100%;
+  }
+  #overlay h4 {
+    font-size: 7vw;
+  }
+  #overlay p {
+    font-size: 4vw;
+  }
+}
+.page5 {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c1ff15;
+}
+.page5 h3 {
+  font-size: 2vw;
+  text-align: center;
+}
+.page6 {
+  margin-top: 10vw;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page6 h4 {
+  text-align: center;
+  color: white;
+  font-size: 2vw;
+  width: 60%;
+}
+@media (max-width: 600px) {
+  .page6 h4 {
+    font-size: 3.5vw;
+    width: 100%;
+  }
+  .page5 {
+    margin-top: 5vw;
+    height: 20vh;
+  }
+  .page5 h3 {
+    font-size: 3.5vw;
+  }
+  .scroller {
+    margin-bottom: 5vw;
+  }
+  .scroller-in h4 {
+    font-size: 10vw;
+  }
+}
+#page7 {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+}
+.elem {
+  height: 60%;
+  width: 26%;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+.elem h2 {
+  height: 100%;
+  width: 100%;
+  background-color: #c1ff15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vw;
+  text-align: center;
+  color: black;
+  font-weight: 800;
+  position: absolute;
+  z-index: 10;
+  transition: all ease 0.5s;
+}
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.5s;
+  scale: 1.1;
+}
+.elem:hover h2 {
+  color: white;
+  background-color: transparent;
+  font-size: 3vw;
+}
+.elem:hover img {
+  scale: 1;
+}
+#page7 h1 {
+  font-size: 6vw;
+  position: absolute;
+  top: 5px;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #c1ff15;
+  color: black;
+  z-index: -1;
+}
+@media (max-width: 600px) {
+  #page7 {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .elem {
+    width: 90%;
+    height: auto;
+  }
+  .elem h2 {
+    font-size: 5vw;
+  }
+  #page7 h1 {
+    display: none;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .navbar {
+    width: 100%;
+    height: 10vh;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+  }
+  .page1 {
+    width: 100%;
+    height: 120vh;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .page1 h2 {
+    font-size: 10vw;
+  }
+  .page1 h3 {
+    font-size: 4vw;
+  }
+  .page1 p {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  .page2 {
+    width: 100%;
+    height: 100%;
+  }
+  .scroller-in {
+    width: 100%;
+  }
+  .scroller-in h4 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .page3 img {
+    width: 30vw;
+    height: auto;
+  }
+}
